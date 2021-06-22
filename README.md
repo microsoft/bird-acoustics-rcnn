@@ -1,28 +1,23 @@
-# Project
+# Recurrent Concolutional Neural networks for sound classification 
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+We present a deep learning approach towards the large-scale prediction and analysis of bird acoustics from 100 different birdspecies. We use spectrograms constructed on bird audio recordings from the Cornell Bird Challenge (CBC)2020 dataset, which includes recordings of multiple and potentially overlapping bird vocalizations per audio and recordings with background noise. Our experiments show that a hybrid modeling approach that involves a Convolutional Neural Network (CNN) for learning therepresentation for a slice of the spectrogram, and a Recurrent Neural Network (RNN) for the temporal component to combineacross time-points leads to the most accurate model on this dataset. The code has models ranging from stand-alone CNNs to hybrid models of various types obtained by combining CNNs with CNNs or RNNs of the following types:Long Short-Term Memory (LSTM) networks, Gated Recurrent Units (GRU) and Legendre Memory Units (LMU).
 
-As the maintainer of this project, please make a few updates:
+## Setup
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+### Requirements
+The code package is developed using Python 3.6 and Pytorch 1.2 with cuda 10.0. For running the experiments first install the required packages using 'requirements.txt'
 
-## Contributing
+## Experiments
+The data for bird sound classification is downloaded from the Kaggle competition [Cornell birdcall Identification](https://www.kaggle.com/c/birdsong-recognition).
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+For running the experiments, a data preprocessing pipeline is demostrated in the process_data.ipynb
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+After preprocessing the data, the RCNN models with various combinations of representation/temporal models can be run as follows:
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+### CNN + CNN
+An example is shown in CNN_CNN.ipynb notebook for the CNN and TCNN configs taken in the paper. In a similar way, a different set of configs could be supplied to the cnn+cnn model.
+### CNN + RNN
+An exampe for CNN+GRU, CNN+LMU, and CNN+LSTM is shown in CNN_RNN.ipynh notebook. Other variants of RCNNs with different set of parameters can be set as explained in the notebook.
 
 ## Trademarks
 
