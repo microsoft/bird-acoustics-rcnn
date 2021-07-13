@@ -1,4 +1,4 @@
-# Recurrent Concolutional Neural networks for sound classification 
+# Recurrent Convolutional Neural networks for sound classification 
 
 We present a deep learning approach towards the large-scale prediction and analysis of bird acoustics from 100 different birdspecies. We use spectrograms constructed on bird audio recordings from the Cornell Bird Challenge (CBC)2020 dataset, which includes recordings of multiple and potentially overlapping bird vocalizations per audio and recordings with background noise. Our experiments show that a hybrid modeling approach that involves a Convolutional Neural Network (CNN) for learning therepresentation for a slice of the spectrogram, and a Recurrent Neural Network (RNN) for the temporal component to combineacross time-points leads to the most accurate model on this dataset. The code has models ranging from stand-alone CNNs to hybrid models of various types obtained by combining CNNs with CNNs or RNNs of the following types:Long Short-Term Memory (LSTM) networks, Gated Recurrent Units (GRU) and Legendre Memory Units (LMU).
 
