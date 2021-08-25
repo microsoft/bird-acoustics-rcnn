@@ -2,6 +2,10 @@
 
 We present a deep learning approach towards the large-scale prediction and analysis of bird acoustics from 100 different birdspecies. We use spectrograms constructed on bird audio recordings from the Cornell Bird Challenge (CBC)2020 dataset, which includes recordings of multiple and potentially overlapping bird vocalizations per audio and recordings with background noise. Our experiments show that a hybrid modeling approach that involves a Convolutional Neural Network (CNN) for learning therepresentation for a slice of the spectrogram, and a Recurrent Neural Network (RNN) for the temporal component to combineacross time-points leads to the most accurate model on this dataset. The code has models ranging from stand-alone CNNs to hybrid models of various types obtained by combining CNNs with CNNs or RNNs of the following types:Long Short-Term Memory (LSTM) networks, Gated Recurrent Units (GRU) and Legendre Memory Units (LMU).
 
+**Paper:** Comparing recurrent convolutional neural networks for large scale bird species classification\
+Gaurav Gupta, Meghana Kshirsagar, Ming Zhong, Shahrzad Gholami, and Juan Lavista Ferres\
+Nature Scientific Reports [link](https://www.nature.com/articles/s41598-021-96446-w)
+
 ## Setup
 
 ### Requirements
